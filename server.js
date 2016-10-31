@@ -16,7 +16,17 @@ app.get('/', function (req, res) {
 
 // GET /todos
 app.get('/todos', function (req, res) {
-	return res.json(todos);
+	var queryParams = req.query;
+	var filteredTodos = todos;
+
+	// if has property && completed === 'true'
+	if( queryParams.hasOwnProperty('completed') && queryParams.completed === 'true'){
+		filteredTodos = _.where(filteredTodos, {completed: true})
+	} else if( queryParams.hasOwnProperty('completed') && queryParams.completed === 'false'){
+		filteredTodos = _.where(filteredTodos, {completed: false})
+	}
+
+	return res.json(filteredTodos);
 });
 
 // GET /todos/:id
@@ -68,7 +78,6 @@ app.put('/todos/:id', function (req, res) {
 	var todoId = parseInt(req.params.id, 10);
 	var matched = _.findWhere(todos, {id: todoId})
 	var body = _.pick(req.body, 'description', 'completed');
-	console.log(body);
 	var validAttributes = {};
 
 	if(!matched){
