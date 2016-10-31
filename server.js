@@ -1,5 +1,7 @@
 var express = require('express');
 var parser = require('body-parser');
+var _ = require('underscore'); // used to refactor code
+
 var app = express();
 var PORT = process.env.PORT || 8000;
 var todos = [];
@@ -20,13 +22,7 @@ app.get('/todos', function (req, res) {
 // GET /todos/:id
 app.get('/todos/:id', function (req, res) {
 	var todoId = parseInt(req.params.id, 10);
-	var matched;
-
-	for(i = 0; i < todos.length; i++){
-		if (todoId === todos[i].id){
-			matched = todos[i];
-		}
-	}
+	var matched = _.findWhere(todos, {id: todoId});
 
 	if(matched){
 		res.json(matched);
@@ -37,8 +33,15 @@ app.get('/todos/:id', function (req, res) {
 
 // POST /todos
 app.post('/todos', function (req, res) {
-	body = req.body;
 
+	// use pick to take specific values
+	body = _.pick(req.body, 'description', 'completed');
+
+	if(!_.isBoolean(body.completed) || !_.isString(body.description) || body.description.trim().length === 0) {
+		return res.status(400).send();
+	}
+
+	body.description = body.description.trim();
 	body.id = todoNextId;
 	todoNextId ++;
 
