@@ -17,25 +17,51 @@ app.get('/', function (req, res) {
 
 // GET /todos
 app.get('/todos', function (req, res) {
-var queryParams = req.query;
-	var filteredTodos = todos;
+	var query = req.query;
+	var where = {};
+	// var filteredTodos = todos;
 
-	// if has property && completed === 'true'
-	if( queryParams.hasOwnProperty('completed') && queryParams.completed === 'true'){
-		filteredTodos = _.where(filteredTodos, {completed: true})
-	} else if( queryParams.hasOwnProperty('completed') && queryParams.completed === 'false'){
-		filteredTodos = _.where(filteredTodos, {completed: false})
+	// // if has property && completed === 'true'
+	// if( queryParams.hasOwnProperty('completed') && queryParams.completed === 'true'){
+	// 	filteredTodos = _.where(filteredTodos, {completed: true})
+	// } else if( queryParams.hasOwnProperty('completed') && queryParams.completed === 'false'){
+	// 	filteredTodos = _.where(filteredTodos, {completed: false})
+	// }
+
+	// if ( queryParams.hasOwnProperty('description') && queryParams.description.length > 0){
+	// 	filteredTodos = _.filter(filteredTodos, function (todo) {
+	// 		return todo.description.toLowerCase().indexOf(queryParams.description.toLowerCase()) > -1;
+	// 	});
+	// } else if(queryParams.hasOwnProperty('description')){
+	// 	res.status(400).send();
+	// }
+
+	// return res.json(filteredTodos);
+
+	if (query.hasOwnProperty('completed') && query.completed === 'true'){
+		where.completed = true;
+	} else if (query.hasOwnProperty('completed') && query.completed === 'false'){
+		where.completed = false;
 	}
 
-	if ( queryParams.hasOwnProperty('description') && queryParams.description.length > 0){
-		filteredTodos = _.filter(filteredTodos, function (todo) {
-			return todo.description.toLowerCase().indexOf(queryParams.description.toLowerCase()) > -1;
-		});
-	} else if(queryParams.hasOwnProperty('description')){
-		res.status(400).send();
+	if (query.hasOwnProperty('description') && query.description.length > 0){
+		where.description = {
+			$like: '%' + query.description + '%'
+		};
 	}
 
-	return res.json(filteredTodos);
+	db.Todo.findAll({
+		where: where
+	}).then(function (todos) {
+		if (todos) {
+			res.json(todos);
+		} else {
+			res.status(404).send();
+		}
+	}).catch(function (e) {
+		res.status(500).send();
+	});
+
 });
 
 // GET /todos/:id
