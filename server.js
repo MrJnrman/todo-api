@@ -129,7 +129,7 @@ app.delete('/todos/:id', function (req, res) {
 			id: todoId
 		}
 	}).then(function (affectedRows) {
-		if(affectedRows === 1){
+		if(affectedRows === 0){
 			res.status(404).json({
 				error: 'No todo with id'
 			});
