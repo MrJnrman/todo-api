@@ -6,10 +6,15 @@ if (env === 'production'){
 	sequelize = new Sequelize(process.env.DATABASE_URL, {
 		dialect: 'postgres'
 	});
-} else{
+} else if (env === 'development') {
 	sequelize = new Sequelize(undefined, undefined, undefined, {
 		'dialect': 'sqlite',
 		'storage': __dirname + '/data/dev-todo-api.sqlite'
+	});	
+} else if(env === 'test') {
+	sequelize = new Sequelize(undefined, undefined, undefined, {
+		'dialect': 'sqlite',
+		'storage': __dirname + '/test/test.sqlite'
 	});	
 }
 

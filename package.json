@@ -4,17 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha test/test.js && ./node_modules/.bin/jscs server.js --fix"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
+    "mocha": "^3.1.2",
     "pg": "^6.1.0",
     "pg-hstore": "^2.3.2",
     "sequelize": "^3.24.6",
     "sqlite3": "^3.1.8",
     "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0"
   }
 }
