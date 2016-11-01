@@ -10,16 +10,6 @@ chai.use(chaiHttp);
 
 // grouping and defining individual test cases
 describe('Todo', function () {
-
-	// reinitiate the database before each test case
-	// beforeEach(function(done) {
-	// 	server.db.sequelize.sync({force: true}).then(function () {
-	// 		db.Todo.create({
-	// 	 		description: 'Take out trash',
-	// 		});
-	// 	});
-	// });
-
 	it('Should list all todos on /todos GET');
 	it('Should list all todos that match query string /todos GET');
 	it('Should list a SINGLE todo on /todos/:id GET');

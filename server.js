@@ -13,12 +13,13 @@ app.use(parser.json());
 
 app.get('/', function (req, res) {
   res.send('Todo API Root');
-});np
+});
 
 // GET /todos
 app.get('/todos', function (req, res) {
   var query = req.query;
   var where = {};
+
   // var filteredTodos = todos;
 
   // // if has property && completed === 'true'
@@ -91,20 +92,6 @@ app.post('/todos', function (req, res) {
 
   // use pick to take specific values
   body = _.pick(req.body, 'description', 'completed');
-
-  // if(!_.isBoolean(body.completed) || !_.isString(body.description) || body.description.trim().length === 0) {
-  // 	return res.status(400).send();
-  // }
-
-  // body.description = body.description.trim();
-  // body.id = todoNextId;
-  // todoNextId ++;
-
-  // todos.push(body);
-
-  // res.json(body);
-
-  console.log(body);
 
   db.Todo.create(body).then(function (todo) {
     res.json(todo.toJSON());
