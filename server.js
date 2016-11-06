@@ -10,9 +10,10 @@ var todoNextId = 1;
 
 // express middleware that parses body of request
 app.use(parser.json());
+app.use(express.static(__dirname + '/public'));
 
 app.get('/', function (req, res) {
-  res.send('Todo API Root');
+  res.render('index.html');
 });
 
 // GET /todos
@@ -89,6 +90,7 @@ app.get('/todos/:id', function (req, res) {
 
 // POST /todos
 app.post('/todos', function (req, res) {
+  console.log(req.body);
 
   // use pick to take specific values
   body = _.pick(req.body, 'description', 'completed');
@@ -133,6 +135,7 @@ app.delete('/todos/:id', function (req, res) {
 
 // UPDATE /todos/:id
 app.put('/todos/:id', function (req, res) {
+  console.log(req.body);
   var todoId = parseInt(req.params.id, 10);
   var body = _.pick(req.body, 'description', 'completed');
   var attributes = {};
