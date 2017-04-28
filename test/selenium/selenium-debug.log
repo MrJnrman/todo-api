@@ -1,0 +1,103 @@
+12:36:52.352 INFO - Selenium build info: version: '3.0.0', revision: '350cf60'
+12:36:52.353 INFO - Launching a standalone Selenium Server
+2017-04-28 12:36:52.370:INFO::main: Logging initialized @226ms
+12:36:52.422 INFO - Driver provider org.openqa.selenium.ie.InternetExplorerDriver registration is skipped:
+ registration capabilities Capabilities [{ensureCleanSession=true, browserName=internet explorer, version=, platform=WINDOWS}] does not match the current platform MAC
+12:36:52.422 INFO - Driver provider org.openqa.selenium.edge.EdgeDriver registration is skipped:
+ registration capabilities Capabilities [{browserName=MicrosoftEdge, version=, platform=WINDOWS}] does not match the current platform MAC
+12:36:52.422 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+12:36:52.422 INFO - Driver provider com.opera.core.systems.OperaDriver registration is skipped:
+Unable to create new instances on this machine.
+12:36:52.422 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+12:36:52.423 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+2017-04-28 12:36:52.456:INFO:osjs.Server:main: jetty-9.2.15.v20160210
+2017-04-28 12:36:52.480:INFO:osjsh.ContextHandler:main: Started o.s.j.s.ServletContextHandler@5d5eef3d{/,null,AVAILABLE}
+2017-04-28 12:36:52.507:INFO:osjs.ServerConnector:main: Started ServerConnector@421d7ce8{HTTP/1.1}{0.0.0.0:4444}
+2017-04-28 12:36:52.507:INFO:osjs.Server:main: Started @362ms
+12:36:52.507 INFO - Selenium Server is up and running
+12:36:52.717 INFO - SessionCleaner initialized with insideBrowserTimeout 0 and clientGoneTimeout 1800000 polling every 180000
+12:36:52.744 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=Selenium Test, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
+12:36:52.758 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, marionette=true, name=Selenium Test, browserName=chrome, javascriptEnabled=true, platform=ANY}]
+Starting ChromeDriver 2.29.461585 (0be2cd95f834e9ee7c46bcc7cf405b483f5ae83b) on port 1128
+Only local connections are allowed.
+12:36:53.002 INFO - Attempting bi-dialect session, assuming Postel's Law holds true on the remote end
+12:36:53.677 INFO - Detected dialect: OSS
+12:36:53.693 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=Selenium Test, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
+12:36:53.707 INFO - Executing: [get: http://quality-todo-api.herokuapp.com])
+12:36:54.642 INFO - Done: [get: http://quality-todo-api.herokuapp.com]
+12:36:54.648 INFO - Executing: [get title])
+12:36:54.654 INFO - Done: [get title]
+12:36:54.667 INFO - Executing: [find element: By.cssSelector: p > input[type=text]])
+12:36:54.706 INFO - Done: [find element: By.cssSelector: p > input[type=text]]
+12:36:54.714 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on MAC (61ec326cae76064d6048a57a2e1283cf)] -> css selector: p > input[type=text]]])
+12:36:54.738 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on MAC (61ec326cae76064d6048a57a2e1283cf)] -> css selector: p > input[type=text]]]
+12:36:54.741 INFO - Executing: [find element: By.cssSelector: p > input[type=text]])
+12:36:54.750 INFO - Done: [find element: By.cssSelector: p > input[type=text]]
+12:36:54.757 INFO - Executing: [send keys: 0 [[ChromeDriver: chrome on MAC (61ec326cae76064d6048a57a2e1283cf)] -> css selector: p > input[type=text]], [N, i, g, h, t,  , W, a, t, c, h,  , T, e, s, t]])
+12:36:54.839 INFO - Done: [send keys: 0 [[ChromeDriver: chrome on MAC (61ec326cae76064d6048a57a2e1283cf)] -> css selector: p > input[type=text]], [N, i, g, h, t,  , W, a, t, c, h,  , T, e, s, t]]
+12:36:54.843 INFO - Executing: [find element: By.cssSelector: p > button])
+12:36:54.863 INFO - Done: [find element: By.cssSelector: p > button]
+12:36:54.868 INFO - Executing: [click: 1 [[ChromeDriver: chrome on MAC (61ec326cae76064d6048a57a2e1283cf)] -> css selector: p > button]])
+12:36:54.919 INFO - Done: [click: 1 [[ChromeDriver: chrome on MAC (61ec326cae76064d6048a57a2e1283cf)] -> css selector: p > button]]
+12:36:55.430 INFO - Executing: [find element: By.cssSelector: #incomplete-tasks])
+12:36:55.449 INFO - Done: [find element: By.cssSelector: #incomplete-tasks]
+12:36:55.453 INFO - Executing: [get text: 2 [[ChromeDriver: chrome on MAC (61ec326cae76064d6048a57a2e1283cf)] -> css selector: #incomplete-tasks]])
+12:36:55.476 INFO - Done: [get text: 2 [[ChromeDriver: chrome on MAC (61ec326cae76064d6048a57a2e1283cf)] -> css selector: #incomplete-tasks]]
+12:36:55.481 INFO - Executing: [find element: By.cssSelector: #incomplete-tasks > li:last-child > button.edit])
+12:36:55.498 INFO - Done: [find element: By.cssSelector: #incomplete-tasks > li:last-child > button.edit]
+12:36:55.503 INFO - Executing: [is displayed: 3 [[ChromeDriver: chrome on MAC (61ec326cae76064d6048a57a2e1283cf)] -> css selector: #incomplete-tasks > li:last-child > button.edit]])
+12:36:55.521 INFO - Done: [is displayed: 3 [[ChromeDriver: chrome on MAC (61ec326cae76064d6048a57a2e1283cf)] -> css selector: #incomplete-tasks > li:last-child > button.edit]]
+12:36:55.524 INFO - Executing: [find element: By.cssSelector: #incomplete-tasks > li:last-child > button.edit])
+12:36:55.534 INFO - Done: [find element: By.cssSelector: #incomplete-tasks > li:last-child > button.edit]
+12:36:55.537 INFO - Executing: [click: 3 [[ChromeDriver: chrome on MAC (61ec326cae76064d6048a57a2e1283cf)] -> css selector: #incomplete-tasks > li:last-child > button.edit]])
+12:36:55.582 INFO - Done: [click: 3 [[ChromeDriver: chrome on MAC (61ec326cae76064d6048a57a2e1283cf)] -> css selector: #incomplete-tasks > li:last-child > button.edit]]
+12:36:55.585 INFO - Executing: [find element: By.cssSelector: #incomplete-tasks > li.editMode > input[type=text]])
+12:36:55.604 INFO - Done: [find element: By.cssSelector: #incomplete-tasks > li.editMode > input[type=text]]
+12:36:55.608 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on MAC (61ec326cae76064d6048a57a2e1283cf)] -> css selector: #incomplete-tasks > li.editMode > input[type=text]]])
+12:36:55.626 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on MAC (61ec326cae76064d6048a57a2e1283cf)] -> css selector: #incomplete-tasks > li.editMode > input[type=text]]]
+12:36:55.630 INFO - Executing: [find element: By.cssSelector: #incomplete-tasks > li.editMode > input[type=text]])
+12:36:55.638 INFO - Done: [find element: By.cssSelector: #incomplete-tasks > li.editMode > input[type=text]]
+12:36:55.641 INFO - Executing: [clear: 4 [[ChromeDriver: chrome on MAC (61ec326cae76064d6048a57a2e1283cf)] -> css selector: #incomplete-tasks > li.editMode > input[type=text]]])
+12:36:55.664 INFO - Done: [clear: 4 [[ChromeDriver: chrome on MAC (61ec326cae76064d6048a57a2e1283cf)] -> css selector: #incomplete-tasks > li.editMode > input[type=text]]]
+12:36:55.668 INFO - Executing: [find element: By.cssSelector: #incomplete-tasks > li.editMode > input[type=text]])
+12:36:55.676 INFO - Done: [find element: By.cssSelector: #incomplete-tasks > li.editMode > input[type=text]]
+12:36:55.678 INFO - Executing: [get text: 4 [[ChromeDriver: chrome on MAC (61ec326cae76064d6048a57a2e1283cf)] -> css selector: #incomplete-tasks > li.editMode > input[type=text]]])
+12:36:55.701 INFO - Done: [get text: 4 [[ChromeDriver: chrome on MAC (61ec326cae76064d6048a57a2e1283cf)] -> css selector: #incomplete-tasks > li.editMode > input[type=text]]]
+12:36:55.706 INFO - Executing: [find element: By.cssSelector: #incomplete-tasks > li.editMode > input[type=text]])
+12:36:55.713 INFO - Done: [find element: By.cssSelector: #incomplete-tasks > li.editMode > input[type=text]]
+12:36:55.718 INFO - Executing: [send keys: 4 [[ChromeDriver: chrome on MAC (61ec326cae76064d6048a57a2e1283cf)] -> css selector: #incomplete-tasks > li.editMode > input[type=text]], [N, i, g, h, t,  , W, a, t, c, h,  , U, p, d, a, t, e, d,  , T, e, s, t]])
+12:36:55.792 INFO - Done: [send keys: 4 [[ChromeDriver: chrome on MAC (61ec326cae76064d6048a57a2e1283cf)] -> css selector: #incomplete-tasks > li.editMode > input[type=text]], [N, i, g, h, t,  , W, a, t, c, h,  , U, p, d, a, t, e, d,  , T, e, s, t]]
+12:36:55.796 INFO - Executing: [find element: By.cssSelector: #incomplete-tasks > li.editMode > button.edit])
+12:36:55.814 INFO - Done: [find element: By.cssSelector: #incomplete-tasks > li.editMode > button.edit]
+12:36:55.818 INFO - Executing: [click: 3 [[ChromeDriver: chrome on MAC (61ec326cae76064d6048a57a2e1283cf)] -> css selector: #incomplete-tasks > li:last-child > button.edit]])
+12:36:55.846 INFO - Done: [click: 3 [[ChromeDriver: chrome on MAC (61ec326cae76064d6048a57a2e1283cf)] -> css selector: #incomplete-tasks > li:last-child > button.edit]]
+12:36:56.357 INFO - Executing: [find element: By.cssSelector: #incomplete-tasks])
+12:36:56.367 INFO - Done: [find element: By.cssSelector: #incomplete-tasks]
+12:36:56.370 INFO - Executing: [get text: 2 [[ChromeDriver: chrome on MAC (61ec326cae76064d6048a57a2e1283cf)] -> css selector: #incomplete-tasks]])
+12:36:56.381 INFO - Done: [get text: 2 [[ChromeDriver: chrome on MAC (61ec326cae76064d6048a57a2e1283cf)] -> css selector: #incomplete-tasks]]
+12:36:56.384 INFO - Executing: [find element: By.cssSelector: #incomplete-tasks > li:last-child > input[type=checkbox]])
+12:36:56.403 INFO - Done: [find element: By.cssSelector: #incomplete-tasks > li:last-child > input[type=checkbox]]
+12:36:56.406 INFO - Executing: [click: 5 [[ChromeDriver: chrome on MAC (61ec326cae76064d6048a57a2e1283cf)] -> css selector: #incomplete-tasks > li:last-child > input[type=checkbox]]])
+12:36:56.453 INFO - Done: [click: 5 [[ChromeDriver: chrome on MAC (61ec326cae76064d6048a57a2e1283cf)] -> css selector: #incomplete-tasks > li:last-child > input[type=checkbox]]]
+12:36:56.965 INFO - Executing: [find element: By.cssSelector: #completed-tasks])
+12:36:56.987 INFO - Done: [find element: By.cssSelector: #completed-tasks]
+12:36:56.990 INFO - Executing: [get text: 6 [[ChromeDriver: chrome on MAC (61ec326cae76064d6048a57a2e1283cf)] -> css selector: #completed-tasks]])
+12:36:57.011 INFO - Done: [get text: 6 [[ChromeDriver: chrome on MAC (61ec326cae76064d6048a57a2e1283cf)] -> css selector: #completed-tasks]]
+12:36:57.015 INFO - Executing: [find element: By.cssSelector: #completed-tasks > li:last-child > input[type=checkbox]])
+12:36:57.033 INFO - Done: [find element: By.cssSelector: #completed-tasks > li:last-child > input[type=checkbox]]
+12:36:57.036 INFO - Executing: [click: 5 [[ChromeDriver: chrome on MAC (61ec326cae76064d6048a57a2e1283cf)] -> css selector: #incomplete-tasks > li:last-child > input[type=checkbox]]])
+12:36:57.064 INFO - Done: [click: 5 [[ChromeDriver: chrome on MAC (61ec326cae76064d6048a57a2e1283cf)] -> css selector: #incomplete-tasks > li:last-child > input[type=checkbox]]]
+12:36:57.574 INFO - Executing: [find element: By.cssSelector: #incomplete-tasks])
+12:36:57.585 INFO - Done: [find element: By.cssSelector: #incomplete-tasks]
+12:36:57.598 INFO - Executing: [get text: 2 [[ChromeDriver: chrome on MAC (61ec326cae76064d6048a57a2e1283cf)] -> css selector: #incomplete-tasks]])
+12:36:57.608 INFO - Done: [get text: 2 [[ChromeDriver: chrome on MAC (61ec326cae76064d6048a57a2e1283cf)] -> css selector: #incomplete-tasks]]
+12:36:57.612 INFO - Executing: [find element: By.cssSelector: #incomplete-tasks > li:last-child > button.delete])
+12:36:57.633 INFO - Done: [find element: By.cssSelector: #incomplete-tasks > li:last-child > button.delete]
+12:36:57.636 INFO - Executing: [click: 7 [[ChromeDriver: chrome on MAC (61ec326cae76064d6048a57a2e1283cf)] -> css selector: #incomplete-tasks > li:last-child > button.delete]])
+12:36:57.684 INFO - Done: [click: 7 [[ChromeDriver: chrome on MAC (61ec326cae76064d6048a57a2e1283cf)] -> css selector: #incomplete-tasks > li:last-child > button.delete]]
+12:36:58.192 INFO - Executing: [find elements: By.cssSelector: body])
+12:36:58.214 INFO - Done: [find elements: By.cssSelector: body]
+12:36:58.217 INFO - Executing: [get text: 8 [[ChromeDriver: chrome on MAC (61ec326cae76064d6048a57a2e1283cf)] -> css selector: body]])
+12:36:58.239 INFO - Done: [get text: 8 [[ChromeDriver: chrome on MAC (61ec326cae76064d6048a57a2e1283cf)] -> css selector: body]]
+12:36:58.244 INFO - Executing: [delete session: 0fc47a4b-2424-4540-a582-4aba5c301364])
+12:36:58.317 INFO - Done: [delete session: 0fc47a4b-2424-4540-a582-4aba5c301364]

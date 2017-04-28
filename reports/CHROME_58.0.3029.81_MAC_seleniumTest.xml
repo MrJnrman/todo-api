@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="1">
+
+  <testsuite name="seleniumTest"
+    errors="0" failures="0" hostname="" id="" package="seleniumTest" skipped="0"
+    tests="1" time="5.738" timestamp="Fri, 28 Apr 2017 17:36:52 GMT">
+  
+    <testcase name="Todo Api Frontend Test" classname="seleniumTest" time="5.738" assertions="10">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+  
+  </testsuite>
+</testsuites>

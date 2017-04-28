@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "istanbul cover ./node_modules/.bin/_mocha test/test.js && ./node_modules/.bin/jscs server.js --fix && ./node_modules/.bin/nightwatch test/selenium/seleniumTest.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "report": "./node_modules/nightwatch/bin/nightwatch | ./node_modules/qualitywatcher/dist/bin/qualitywatcher.js"
   },
   "author": "Jamel Reid",
   "license": "ISC",
@@ -22,6 +23,7 @@
   "devDependencies": {
     "babel": "^6.5.2",
     "chai": "^3.5.0",
-    "chai-http": "^3.0.0"
+    "chai-http": "^3.0.0",
+    "qualitywatcher": "^0.3.0"
   }
 }
